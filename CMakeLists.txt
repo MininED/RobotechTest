@@ -32,5 +32,7 @@ if(NOT LIBMODBUS_FOUND)
     message(FATAL_ERROR "libmodbus not found after installation.")
 endif()
 
+find_package(Threads REQUIRED)
+
 add_subdirectory(Server)
 add_subdirectory(Client)

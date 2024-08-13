@@ -14,7 +14,7 @@ set(HEADERS
 
 add_executable(Server ${SOURCES} ${HEADERS})
 
-target_link_libraries(Server PRIVATE Boost::system ${LIBMODBUS_LIBRARIES})
+target_link_libraries(Server PRIVATE Boost::system Threads::Threads ${LIBMODBUS_LIBRARIES})
 
 install(TARGETS Server RUNTIME DESTINATION bin)
 

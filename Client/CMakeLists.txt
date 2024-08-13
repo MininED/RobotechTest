@@ -9,6 +9,6 @@ set(HEADERS
 
 add_executable(Client ${SOURCES} ${HEADERS})
 
-target_link_libraries(Client PRIVATE Boost::system)
+target_link_libraries(Client PRIVATE Boost::system Threads::Threads)
 
 install(TARGETS Client RUNTIME DESTINATION bin)
